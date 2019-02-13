@@ -20,6 +20,8 @@
 - [Некоторые тонкости использования Service Workers](https://habr.com/post/315660/)
 - [Что такое SW и как они помогают повысить производительность](http://www.cat-in-web.ru/chto-takoe-servis-vorkery-i-kak-oni-pomogayut-povysit-proizvoditelnost)
 - [Генерация страниц сайта средствами SW](https://vk.com/@cupmrg-generaciya-stranic-saita-sredstvami-servis-vorkerov)
+- [Тестируем сервис-воркеры](https://uncaughtexception.ru/2017/04/04/testing-service-workers.html)
+- [Measuring the Real-world Performance Impact of Service Workers](https://developers.google.com/web/showcase/2016/service-worker-perf)
 
 ## Видео
 
