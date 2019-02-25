@@ -5,7 +5,7 @@ db
   .stores({messages: 'text'});
 
 function putToLocal(data) {
-  db
+  return db
     .messages
     .put({text: data});
 }
@@ -23,17 +23,19 @@ if ('serviceWorker' in navigator) {
           const message = document
             .getElementById('msg')
             .value;
-          putToLocal(message);
-          document
+
+          putToLocal(message).then(()=> {
+            return registration
+              .sync
+              .register(message)
+              .then(() => {
+                console.log('Sync registered');
+              });
+          }).then(() => {
+            document
             .getElementById('msg')
             .value = '';
-
-          registration
-            .sync
-            .register(message)
-            .then(() => {
-              console.log('Sync registered');
-            });
+          });
         });
     });
 } else {
