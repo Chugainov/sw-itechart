@@ -24,6 +24,9 @@ if ('serviceWorker' in navigator) {
             .getElementById('msg')
             .value;
           putToLocal(message);
+          document
+            .getElementById('msg')
+            .value = '';
 
           registration
             .sync
