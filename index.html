@@ -15,7 +15,7 @@
       position: absolute;
       clip: rect(0 0 0 0);
     }
-    .progress.progress--red::before {
+    .progress.progress--darkgray::before {
       background-color: darkgray;
     }
     h2.sw-font {
@@ -709,7 +709,7 @@
     <pre>
       <code>navigator.serviceWorker.ready</code>
       <code>  .then(function(swRegistration) {</code>
-      <code>    return swRegistration.sync.register('mySync');</code>
+      <code>    return swRegistration.sync.register(<mark>'mySync'</mark>);</code>
       <code>  });</code>
     </pre>
     <div class="bottom-line place bottom cover" style="background-color: gray; height: 8%; width: 100%;">
@@ -721,7 +721,7 @@
     <h2>Background Sync API</h2>
     <pre>
       <code>self.addEventListener('sync', function(event) {</code>
-      <code>  if (event.tag == 'mySync') {</code>
+      <code>  if (<mark>event.tag == 'mySync'</mark>) {</code>
       <code>    event.waitUntil(<mark>doSomeStuff()</mark>);</code>
       <code>  }</code>
       <code>});</code>
@@ -731,12 +731,6 @@
       </div>
   </section>
 
-  <!-- <section class="slide">
-    <h2 class="shout">Демонстрация</h2>
-    <div class="bottom-line place bottom cover" style="background-color: gray; height: 8%; width: 100%;">
-      <img src="pictures/Logo-white.png" alt="логотип" class="place bottom left" style="height: 20px; width: auto; margin: 0 0 16px 25px;"> 
-    </div>
-  </section> -->
   <section class="slide">
     <img src="http://qrcoder.ru/code/?https%3A%2F%2Ft.me%2Fsw_testing&10&0" class="place top center" style="top: 50px;" width="330" height="330" border="0" title="QR код">
     <a href="https://t.me/sw_testing"> 
@@ -996,8 +990,50 @@
         <img src="pictures/Logo-white.png" alt="логотип" class="place bottom left" style="height: 20px; width: auto; margin: 0 0 16px 25px;"> 
       </div>
   </section>
+
+  <section class="slide">
+    <h2>Источники данных для сервис-воркера</h2>
+    <figure>
+      <img class="cover" src="pictures/sources-of-sw.png" alt="Откуда сервис-воркер может получать данные">
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Cache only</h2>
+    <figure>
+      <img class="cover" src="pictures/unused-network.png" alt="cashe only">
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Cache and update</h2>
+    <figure>
+      <img class="cover" src="pictures/cashe-and-update.png" alt="Cache and update">
+    </figure>
+  </section>
   
-  <div class="progress progress--red" ></div>
+  <section class="slide">
+    <h2>Cache, update and refresh</h2>
+    <figure>
+      <img class="cover" src="pictures/cashe-update-and-refresh.png" alt="Cache, update and refresh">
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Network first</h2>
+    <figure>
+      <img class="cover" src="pictures/network-first.png" alt="network first">
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>Network first</h2>
+    <figure>
+      <img class="cover" src="pictures/network-first-2.png" alt="network first">
+    </figure>
+  </section>
+  
+  <div class="progress progress--darkgray" ></div>
 
   <script src="shower/shower.min.js"></script>
   <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
