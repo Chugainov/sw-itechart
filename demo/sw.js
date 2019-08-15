@@ -25,10 +25,14 @@ function sendToChat()
 
     db.table('messages').each(function (item) {
 
-      fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${item.text}`, params);
+      
     });
 
     db.table('messages').clear();
+    
+    const text = 'Ай ай ай! Как нехорошо!'
+    
+    fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${text}`, params);
   });
 
   // const db = new Dexie("UnsyncData");
